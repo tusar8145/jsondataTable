@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Responsive DataTable</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel='stylesheet' href='https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js'></script>
+
+  <style type="text/css">
+      tr {cursor: pointer;}
+  </style>
+  
+</head>
+
+
+<body>
+ 
+<div  class="jumbotron text-center" >
+  <h4 id="">Responsive DataTable</h4>  
+</div>
+ 
+
+  <div class="container" style="color:green"> 
+	<div  class="ju mbotron text-center table-responsive" >
+		  <p id="showData">Loading DataTable <i class="fa fa-spinner fa-spin" style="font-size:24px"></i></p>
+	</div>
+ </div> 
+  
+
+<script>	 
+
+  	$.ajax({
+				type: "POST",
+				url: "https://career24.xyz/bigdataTable/api/post/read.php",
+				dataType: "JSON",
+				success: function(data) {
+					
+		 //JSON Data to Table		
+			var col = [];
+        for (var i = 0; i < data.length; i++) {
+            for (var key in data[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+ 
+        var table = document.createElement("table");
+		table.className = "table table-hover";
+		table.setAttribute("id", "myTable");
+
+		//get table header
+		var myTable = document.getElementById("myTable");
+		var temp='<tr><th>';
+
+        for (var i = 0; i < col.length; i++) {
+			 if(i==col.length-1){  temp=temp+col[i]+'</th></tr>';}
+			  else {  temp=temp+col[i]+'</th><th>';}	
+        } 
+ 
+        //get table body
+        for (var i = 0; i < data.length; i++) {
+
+            tr = table.insertRow(-1);
+            tr.setAttribute("onclick", "changeColor(this)");
+ 
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = data[i][col[j]];
+            }
+        }
+ 
+			  var divContainer = document.getElementById("showData");
+			  divContainer.innerHTML = "";
+			  divContainer.appendChild(table);
+		
+			  var myTable = document.getElementById("myTable");
+			  var header = myTable.createTHead();
+			  var footer = myTable.createTFoot();
+			  header.innerHTML=temp;
+			  footer.innerHTML=temp;
+
+			  //Data Table
+			   var table2 = $('#myTable').DataTable({ 
+					select: false,
+					"columnDefs": [{
+						className: "Name", 
+						"targets":[0],
+						"searchable":false
+					}]
+				});
+			  
+			},
+			error: function(err) {
+				alert(err);
+			}
+			
+		}); 	 
+			
+			 //click a row & color
+			 var elem;
+				function changeColor(o){
+				  o.style.backgroundColor=(o.style.backgroundColor=='#0075ff59')?('transparent'):('#0075ff59');
+				  $(o).siblings().removeAttr('style');
+			 
+				}		
+				
+			//click outside response & color
+			$(document).mouseup(function (e) { 
+				var container = $(".container"); 
+				if(!container.is(e.target) &&  
+				container.has(e.target).length === 0) { 
+				  $("tr").siblings().removeAttr('style');
+				} else{
+					 
+				}
+			}); 
+
+    </script>
+
+
+</body>
+</html>
