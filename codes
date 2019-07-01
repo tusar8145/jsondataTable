@@ -1,0 +1,498 @@
+
+<?php  echo $variable; ?>
+<?php $service= $_GET['service']; 
+//php_Short_Code
+	  	include('config.php');
+		error_reporting(0);
+		require_once('phpmailer.php');
+	?>	
+		<?php include('header.php'); ?>
+		<?php include('footer.php'); ?>
+		
+		
+		<?php  	
+	$currentPage = 'service'; 
+	
+	$title = 'Web design training in Bangladesh, Web design training in Uttara, Web design training center in Dhaka, Web design training, wordpress training, Best Training Center Bangladesh, SoftwareLagbe is the leading IT training institute in Dhaka, Outsourcing in Bangladesh, it training center in bangladesh, computer training center in uttara, it training center in uttara, best computer training institute in dhaka, government computer training center in dhaka, free computer training courses in bangladesh, free training in dhaka, free outsourcing training in dhaka, list of training institute in bangladesh, web design training uttara, graphics design course in uttara, uttara it institute, outsourcing uttara, uttara infotech, freelancing training center in uttara, outsourcing training center in gazipur, freelancing training in gazipur, graphics design course fees, government graphic arts institute dhaka, best outsourcing training center in uttara ';
+	$metaTags = 'Best Web design training in Bangladesh, Web design training in Uttara, Web design training center in Dhaka, Web design training, wordpress training, Best Training Center Bangladesh, SoftwareLagbe is the leading IT training institute in Dhaka, Outsourcing course in Bangladesh, it training center in bangladesh, computer training center in uttara, it training center in uttara, best computer training institute in dhaka, government computer training center in dhaka, free computer training courses in bangladesh, free training in dhaka, free outsourcing training in dhaka, list of training institute in bangladesh, web design training uttara, graphics design course in uttara, uttara it institute, outsourcing uttara, uttara infotech, freelancing training center in uttara, outsourcing training center in gazipur, freelancing training in gazipur, graphics design course fees, government graphic arts institute dhaka, best outsourcing training center in uttara';
+	$mtitle='Web design training in Bangladesh, Web design training in Uttara, Web design training center in Dhaka, Web design training, wordpress training, Best Training Center Bangladesh, SoftwareLagbe is the leading IT training institute in Dhaka, Outsourcing in Bangladesh, it training center in bangladesh, computer training center in uttara, it training center in uttara, best computer training institute in dhaka, government computer training center in dhaka, free computer training courses in bangladesh, free training in dhaka, free outsourcing training in dhaka, list of training institute in bangladesh, web design training uttara, graphics design course in uttara, uttara it institute, outsourcing uttara, uttara infotech, freelancing training center in uttara, outsourcing training center in gazipur, freelancing training in gazipur, graphics design course fees, government graphic arts institute dhaka, best outsourcing training center in uttara ';
+    $content='web design training center in dhaka, best web design training center in dhaka, web design and development training center in dhaka, web design training dhaka, web design training center in dhaka, web design training institute in dhaka, web design training in dhaka, best web design training in dhaka, web design and development training in dhaka, website design training in bangladesh, web design training in bangladesh, web design training institute bangladesh, website design training center in bangladesh, web design and development training bangladesh, free web design training in bangladesh, web design and development training in bangladesh, website design training in bangladesh, website design training center in bangladesh, web training bangladesh, web development training bangladesh, web training bangladesh dhaka bangladesh, web application training in bangladesh, web design training institute bangladesh, web design and development training bangladesh, web design training in bangladesh, web development training in bangladesh, free web design training in bangladesh, web design and development training in bangladesh, web development training institute in bangladesh, web development training center in bangladesh, web page design training center in bangladesh,';
+?>
+<?php if ($currentPage === 'software') {echo 'class="this"';} ?>
+	<?	/*String*/
+		
+		substr($var, 0, 18 )
+		$phone = str_replace(' ', '', $phone); 
+		
+		/*Random*/
+		$random=rand(10, 300);
+		
+		/*Redirect*/
+		echo '<script>window.location.href = "online_login.php";</script>';
+		
+		/*Array*/
+		$arr=array();unset($arr_temp);
+		
+		$emails=json_encode($arr);//array to string
+		$emails =implode(',',$arr); //array to string
+		
+		$emails=explode(',',$arr); //make array with adding extra , to each
+		if( in_array('have',$age)){  } else{  }
+ 
+			
+//php_functions
+		function phpAlert($msg) { echo '<script type="text/javascript">alert("' . $msg . '")</script>'; }
+		
+        function send_sms($phone, $sms) {
+		 	$to = $phone;
+			$token = "a73835c6a4c2ba37ed58666d97e84496";
+			$message =$sms;
+			$url = "http://api.greenweb.com.bd/api.php";
+			$data= array('to'=>"$to",'message'=>"$message",'token'=>"$token");  $ch = curl_init();  curl_setopt($ch, CURLOPT_URL,$url);curl_setopt($ch, CURLOPT_ENCODING, '');curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));$smsresult = curl_exec($ch);
+         }
+		 
+        function send_email($subject, $sms, $contact) {
+ 			require_once('../login/mailer/class.phpmailer.php');
+
+ 			require_once('../login/mailer/class.phpmailer.php');
+		    $mail = new PHPMailer(); 
+			$mail->IsSMTP(); 
+			$mail->SMTPDebug  = 0;                     
+			$mail->SMTPAuth   = true;                  
+			$mail->SMTPSecure = "ssl";                 
+			$mail->Host       = "mail.softwarelagbe.com";        
+			$mail->Port       = 465;             
+			$mail->AddAddress($contact);
+			$mail->Username="support@softwarelagbe.com";  
+			$mail->Password="135host81451881s";            
+			$mail->SetFrom('support@softwarelagbe.com','SoftwareLagbe IT SOLUTIONS');
+			$mail->AddReplyTo("support@softwarelagbe.com","SoftwareLagbe IT SOLUTIONS");
+			$mail->Subject    = $subject;
+			$mail->MsgHTML($sms);
+			$mail->Send();        
+		}		 
+			
+		function today() {
+			$d1 = new DateTime('now', new DateTimezone('Asia/Dhaka')); $d1=$d1->format('F j, Y, g:i a');
+			return $d1;
+		}
+		
+		function today() {		
+$timeFirst  = strtotime('2011-05-13 18:20:10');
+$timeSecond = strtotime('2011-05-13 18:20:20');
+$differenceInSeconds = $timeSecond - $timeFirst;
+return $differenceInSeconds;	
+		}
+		
+		function phone($phone) { 
+			$phone = str_replace(' ', '', $phone); if (strpos($phone, '+') !== false) { $phone=str_replace('+', '', $phone); } if (substr($phone, 0, 2 ) === "88") { $phone=str_replace('88', '', $phone); }
+			return $phone;
+		}		
+		
+		
+//php SQL
+	if(isset($_POST['search'])){
+		$id= $_POST['id'] ;
+		$query2="select * from user WHERE id='$id'";
+		$result2=mysqli_query($connect,$query2); $rowcount2=mysqli_num_rows($result2); $row2 = mysqli_fetch_all($result2,MYSQLI_ASSOC);
+		for($k=$rowcount2-1;$k>=0;$k--)
+		{  
+				$id=$row2[$k]['id'];		
+				$query1="select * from user1 WHERE id='$id'";
+				$result1=mysqli_query($connect,$query1); $rowcount1=mysqli_num_rows($result1); $row1 = mysqli_fetch_all($result1,MYSQLI_ASSOC);
+				for($j=$rowcount1-1;$j>=0;$j--)
+				{  
+						$id=$row1[$j]['id'];		
+						$query="select * from user2 WHERE id='$id'";
+						$result=mysqli_query($connect,$query); $rowcount=mysqli_num_rows($result); $row = mysqli_fetch_all($result,MYSQLI_ASSOC);
+						for($i=$rowcount-1;$i>=0;$i--)
+						{  
+							$id=$row[$i]['id'];		
+						} 
+				} 	
+		} 	
+	}	
+		
+	if(isset($_POST['insert'])){
+	    $name= $_POST['name'] ;
+		$email= $_POST['email'] ;
+		$password= $_POST['password'] ;
+ 
+	$query="INSERT INTO user (name,email,password) VALUES ('$name','$email','$password')";
+		try{$result=mysqli_query($connect,$query);if($result){if(mysqli_affected_rows($connect) > 0){$say='Insert Successful'; }else{$say='Insert Fails';}}} catch (Exception $ex) {}
+	}			
+		
+	if(isset($_POST['update'])){
+		
+	    $id= $_POST['id'] ;
+	    $name= $_POST['name'] ;
+		$email= $_POST['email'] ;
+		$password= $_POST['password'] ;
+       
+	    $query = "UPDATE user SET name='$name', email='$email',  password='$password' WHERE id='$id' ";
+		try{$update_Result = mysqli_query($connect, $query);if($update_Result){if(mysqli_affected_rows($connect) > 0){$say='Update Successful'; }else{$say='Update Fail';}}} catch (Exception $ex) { }						
+
+    }		
+		
+	if(isset($_POST['delete'])){
+		$id= $_POST['id'] ;
+		$query = "DELETE FROM user WHERE id='$id'";
+		if (mysqli_query($conn, $query)) {$say='Data Deleted Successfully';phpAlert("Data Deleted Successfully") ;} else {$say='Delete Fail';}
+	}		
+		
+	if(isset($_POST['update_insert'])){
+		$q1=$_POST['myTextarea1'];
+		$q2=$_POST['myTextarea2'];
+		$email1=$_POST['email'];
+
+	    $query = "UPDATE exam SET q1='$q1', q2='$q2',  random='$random' WHERE c_email='$email1' ";
+		try{$update_Result = mysqli_query($connect, $query);if($update_Result){				
+
+					if(mysqli_affected_rows($connect) > 0)
+					{		 
+						 $notify="Update Successful";					  
+					}else{
+						
+							$query="INSERT INTO exam (c_email,q1,q2) VALUES ('$email1','$q1','$q2')";
+							try{$result=mysqli_query($connect,$query);if($result){if(mysqli_affected_rows($connect) > 0){ $notify="Insert Success"; }else{ $notify="Insert Fail";}}} catch (Exception $ex) {}
+					}
+					
+		}} catch (Exception $ex) { }
+	}			
+		
+	
+?>
+
+<!-- Print From Database-table	-->					 
+		<div class="container">
+			<h2>Registered User</h2>
+			<p>Table represents registered user</p>            
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<?php						 		
+						include('config.php');
+						$query="select * from user   ";
+						$result=mysqli_query($connect,$query);
+						$rowcount=mysqli_num_rows($result);
+						$row = mysqli_fetch_all($result,MYSQLI_ASSOC);
+						
+						for($i=$rowcount-1;$i>=0;$i--)
+						{  
+							echo
+							'<tr>	
+							<td>'.$row[$i]['id'].'</td>
+							<td>'.$row[$i]['name'].'</td>
+							<td>'.$row[$i]['email'].'</td>
+							</tr>';	
+						} ?>
+						
+				</tbody>
+			</table>
+		</div>
+		
+<!--Image-->
+	 <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+	 
+	 
+<!--form-->	 
+	 <iframe class="hidden"  name="frame"></iframe>
+	 <form   method="POST" target="frame" >
+		<input class="hidden"type="text" name="sub"  value="<?php echo $sub; ?>" class="form-control" >
+		<input class="hidden"type="text" name="msg"  value="<?php echo $msg; ?>" class="form-control" >
+		<button type="submit"    name="view" class="btn btn-default">View </button>
+	 </form>
+	 
+	 
+<!--css-->	 
+	<style>
+	
+	html {
+    min-height: 607px;
+    background-image: url(https://twimg0-a.akamaihd.net/a/1350072692/t1/img/front_page/jp-mountain@2x.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;}	 
+	 
+@media only screen and (max-width: 576px) {
+	  .mobile {
+	  }
+} 
+  @media only screen and (min-width: 576px) {
+	  .computer {
+		width: 96%;
+	  }	 
+  }
+	</style> 
+	 
+	 
+<?php //JS ?>	
+ <button onclick="myFunction()">Try it</button>
+ <button onkeyup="myFunction()">Try it</button>
+
+ <body class="" onload="setInterval(callme, 500); ">
+ 
+ <script>	 
+ //Ready Function
+		$(document).ready(function(){
+			$("#myBtn").click(function(){
+				//$("#myModal").modal();
+				alert("sss");
+			});
+		});	 
+		
+$(function() {
+    $('body').removeClass('fade-out');
+});
+
+
+</script>		
+function check(){
+	 var email= document.getElementById("email1").innerText; 
+	 alert(email);
+}
+		
+// func call		
+window.setInterval(function(){
+  check();
+}, 5000);	 
+ </script>	
+ 
+ <!--Ajax-->
+<script>	 
+	 function getCode(){
+    
+var phn_code= document.getElementById("phn_code2").innerHTML;
+var phn_number= document.getElementById("phn_number").value;	
+ document.getElementById("phnh").value=phn_number;
+if(phn_number==''){document.getElementById("ph2").innerHTML='Please Enter Phone Number';}
+else	{		$.ajax({
+				type: "POST",
+				url: "online_getCode.php",
+				data: {phn_code:phn_code,phn_number:phn_number},
+				dataType: "JSON",
+				success: function(data) {
+					$("#ph2").html(data);
+				},
+				error: function(err) {
+					alert(err);
+				}
+			});   }
+	 } 	 
+ </script>	 
+ 
+ 
+ 
+ <script>	 
+ 
+ function getnum(){
+    
+	var num1= document.getElementById("num1").innerHTML;
+	var num2= document.getElementById("num2").value;	
+
+	if(num1!=''){num2=num1;}
+	if(num2!=''){num1=num2;}
+
+	var num3=num1+num2;
+
+		if(num3!=''){
+			document.getElementById("result").innerHTML=num3;
+			}
+
+} 	 
+ </script>	
+ 
+ 
+ 
+ 
+ 
+ 
+<!--online_getCode.php-->
+<?php
+
+ $use=$_POST['use'];
+	include('config.php');
+	$qry="select *  from students WHERE admission_no like '$use%'"; 
+	$result=mysqli_query($conn,$qry); 
+	$rowcount=mysqli_num_rows($result); 
+	$row = mysqli_fetch_all($result,MYSQLI_ASSOC);
+	
+ 		for($i=0; $i<$rowcount; $i++)
+		{  
+	
+	 $ad2=$row[$i]['roll_no']+1;
+		}
+ 
+echo json_encode($ad2);
+
+?>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5bda026a22b2be1613fe4a1a/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<!--Facebook Share-->
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5af2001bdad61708"></script>
+
+<div class="fb-comments" data-href="https://softwarelagbe.com/admin/a_dashboard/online_timeline_view.php?id=<?php echo ''; ?>" data-width="100%" data-numposts="100"></div>	
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
+
+
+<!--Table-->
+<div class="container">
+  <h2>Bordered Table</h2>
+  <p>The .table-bordered class adds borders to a table:</p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--Data Table-->
+
+	<link rel='stylesheet' href='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css'>	
+
+	<script src='https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
+	<script src='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
+	<script src='https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script>
+<script>
+$(document).ready(function() {
+    $('#table').DataTable( {
+        "order": [[ 0, "desc" ]]
+    } );
+  
+} );	
+</script>		
+
+<!--iframe-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12  ">    
+						<iframe class="mp"style=" " src="https://softwarelagbe.com/aboutx.php" width="100%"  height="400px" frameborder="0" marginwidth="0" marginheight="0"></iframe>	
+                    </div>
+                </div>                
+            </div>
+
+<!--Modal-->			
+ <button type="button hidden-xs"   class=" btn btn-lg  " style="background-color:#e64b3c; border:5px solid gray; color:white; font-width:bold;" data-toggle="modal" data-target="#myModal_message">Send Message</button>
+
+  <div class="modal fade modal-success  " id="myModal_message" role="dialog">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><center>SMS & Email</center></h2>
+        </div>
+        <div class="modal-body">
+		
+    <p class="text-muted text-center" style="color: white;"><b>Contest No: </b><?php  ?></p>
+  	<iframe class="mp"style=" " style="background-color:red;" src="../../automation/message.php" width="100%"  height="890px" frameborder="0" marginwidth="0" marginheight="0"></iframe>	
+    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" style="font-size:16px;" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>   
+
+
+<!--Meta-->
+<title>Skill Development in IT</title>
+
+<meta name="title" content="<?php echo($mtitle); ?>" /> 
+<meta name="keywords" content="<?php echo($content); ?>" /> 
+<meta name="description"style="color:green;" content="<?php echo($metaTags); ?>" />
+
+<link rel="shortcut icon" href="images/dark-logosm.png" />
+<link rel="image_src" href="../images/U3.jpg" />
+
+
+<!--simple bootstrap-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+</div>
+
+</body>
+</html>
+
+<!-- Facebook Chat -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1680778521954588',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-customerchat" page_id="263109474112366"></div>
+
